@@ -10,6 +10,7 @@
           <input type="checkbox" v-model="task.done" />
           <span>{{ task.text }}</span>
         </label>
+        <button @click="removeTask(index)">❌</button>
       </li>
     </ul>
   </div>
@@ -26,5 +27,9 @@ const addTask = () => {
     tasks.value.push({ text: newTask.value.trim(), done: false })
     newTask.value = ''
   }
+}
+
+const removeTask = (index) => {
+  tasks.value.splice(index, 1)
 }
 </script>
