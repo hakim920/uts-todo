@@ -6,7 +6,10 @@
 
     <ul>
       <li v-for="(task, index) in tasks" :key="index">
-        {{ task.text }}
+        <label>
+          <input type="checkbox" v-model="task.done" />
+          <span>{{ task.text }}</span>
+        </label>
       </li>
     </ul>
   </div>
