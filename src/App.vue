@@ -1,6 +1,6 @@
 <template>
   <div class="todo-container">
-    <h1>📝 To-Do List</h1>
+    <h1>📝 To-Do-List</h1>
 
     <div class="input-group">
       <input v-model="newTask" @keyup.enter="addTask" placeholder="Tulis tugasnya di sini..." />
